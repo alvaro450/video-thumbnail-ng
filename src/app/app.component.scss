@@ -1,0 +1,11 @@
+p {
+  font-family: Lato;
+}
+
+:host {
+  ::ng-deep {
+    .mat-card:first-child {
+      margin-bottom: 20px;
+    }
+  }
+}

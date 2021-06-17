@@ -1,0 +1,27 @@
+<mat-card class="mat-elevation-z8">
+  <mat-card-content>
+    <form [formGroup]="videoFormGroup" (ngSubmit)="onSubmit()">
+      <div>
+        <mat-form-field class="video-url-form-field">
+          <input
+            matInput
+            placeholder="Video Url"
+            type="text"
+            id="videoUrlInput"
+            [formControlName]="'url'"
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <button
+          mat-button
+          color="accent"
+          type="submit"
+          [disabled]="videoFormGroup.invalid"
+        >
+          Get Video Thumbnail
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
